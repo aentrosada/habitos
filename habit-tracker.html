@@ -5,100 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rastreador de Hábitos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
         }
 
         header {
-            background-color: #9b4dca; /* Cor roxa clara */
+            background-color: #9b4dca;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem 0;
+            border-bottom: 5px solid #7f3ba6;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 20px auto;
-            background: #fff;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
         }
 
         .login-form, .habit-form {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
         }
 
-        .login-form input, .habit-form input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        input, button {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
         }
 
-        .login-form button, .habit-form button {
-            background-color: #9b4dca; /* Cor roxa clara */
+        input {
+            width: 100%;
+        }
+
+        button {
+            background-color: #9b4dca;
             color: white;
             border: none;
-            padding: 10px 20px;
             cursor: pointer;
-            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
-        .login-form button:hover, .habit-form button:hover {
-            background-color: #7f3ba6; /* Cor roxa mais escura */
+        button:hover {
+            background-color: #7f3ba6;
         }
 
         .habit-list {
             list-style-type: none;
             padding: 0;
+            margin-top: 30px;
         }
 
         .habit-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            margin: 5px 0;
-            background: #f9f9f9;
+            padding: 12px;
+            margin: 8px 0;
+            background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         .habit-item span {
             flex: 1;
+            font-size: 1.1rem;
         }
 
         .habit-item button {
-            background-color: #9b4dca; /* Cor roxa clara */
+            background-color: #9b4dca;
             color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
             border: none;
-            padding: 5px 10px;
             cursor: pointer;
-            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
         .habit-item button:hover {
-            background-color: #7f3ba6; /* Cor roxa mais escura */
+            background-color: #7f3ba6;
         }
 
         .delete-button {
-            background-color: #e040fb; /* Cor roxa mais intensa para o botão de excluir */
+            background-color: #e040fb;
             color: white;
-            padding: 5px 10px;
+            padding: 6px 12px;
+            border-radius: 8px;
             border: none;
             cursor: pointer;
-            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
         .delete-button:hover {
-            background-color: #d500f9; /* Cor roxa mais escura ao passar o mouse */
+            background-color: #d500f9;
         }
 
         .medal {
@@ -108,6 +130,38 @@
 
         .hidden {
             display: none;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            input, button {
+                padding: 10px;
+                font-size: 0.95rem;
+            }
+
+            .habit-item {
+                padding: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .habit-item button {
+                width: 100%;
+                margin-top: 8px;
+            }
         }
     </style>
 </head>
