@@ -47,7 +47,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            align-items: center; /* Adicionado para centralizar os itens */
+            align-items: center;
         }
 
         input, button {
@@ -55,7 +55,7 @@
             border-radius: 8px;
             border: 1px solid #ddd;
             font-size: 1rem;
-            width: 50%; /* Reduz a largura dos campos pela metade */
+            width: 80%; /* Ajustado para ocupar menos espaço em telas grandes */
         }
 
         button {
@@ -148,7 +148,7 @@
             input, button {
                 padding: 10px;
                 font-size: 0.95rem;
-                width: 100%; /* Garante que os campos ocupem a largura total em telas pequenas */
+                width: 100%; /* Agora os campos ocuparão 100% da largura em dispositivos pequenos */
             }
 
             .habit-item {
@@ -160,6 +160,10 @@
             .habit-item button {
                 width: 100%;
                 margin-top: 8px;
+            }
+
+            .login-form input, .login-form button {
+                width: 100%; /* Assegura que os campos e botões de login/cadastro ocupem 100% da largura em dispositivos móveis */
             }
         }
     </style>
